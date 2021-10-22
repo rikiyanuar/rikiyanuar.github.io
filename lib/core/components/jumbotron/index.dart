@@ -19,18 +19,18 @@ class Jumbotron extends StatelessWidget {
         ),
       ),
       width: double.infinity,
-      padding: EdgeInsets.symmetric(vertical: 120, horizontal: 40),
+      padding: EdgeInsets.fromLTRB(40, 250, 40, 200),
       child: Column(children: [
         Text(
           "Hi, I'm Riki Yanuar",
-          style: KjText.extraLargeBlackBold.copyWith(
+          style: KjText.extraLargeBold.copyWith(
             color: Colors.white,
           ),
         ),
         SizedBox(height: 10),
         Text(
-          "Professional Flutter Engineer in Kediri, Jawa Timur, Indonesia",
-          style: KjText.largeBlackNormal.copyWith(
+          "Professional Flutter Engineer in Kediri, East Java, Indonesia",
+          style: KjText.largeLight.copyWith(
             color: Colors.white,
             fontStyle: FontStyle.italic,
           ),
@@ -62,7 +62,7 @@ class Jumbotron extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
               child: Text(
                 "See My Resume",
-                style: KjText.mediumBlackNormal.copyWith(
+                style: KjText.mediumNormal.copyWith(
                   color: Colors.black,
                 ),
               ),

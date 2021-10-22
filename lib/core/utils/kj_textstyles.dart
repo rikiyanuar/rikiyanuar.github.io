@@ -8,21 +8,25 @@ import 'package:google_fonts/google_fonts.dart';
 /// Set default font family with `Montserrat`
 class KjText {
   /// Small Text
-  static final smallBlackNormal = GoogleFonts.montserrat(
+  static final smallNormal = GoogleFonts.montserrat(
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );
-  static final smallBlackBold = GoogleFonts.montserrat(
+  static final smallBold = GoogleFonts.montserrat(
     fontSize: 12,
     fontWeight: FontWeight.w600,
   );
 
   /// Medium Text
-  static final mediumBlackNormal = GoogleFonts.montserrat(
+  static final mediumLight = GoogleFonts.montserrat(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+  );
+  static final mediumNormal = GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
-  static final mediumBlackBold = GoogleFonts.montserrat(
+  static final mediumBold = GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
@@ -33,22 +37,26 @@ class KjText {
   );
 
   /// Large Text
-  static final largeBlackNormal = GoogleFonts.montserrat(
+  static final largeLight = GoogleFonts.montserrat(
+    fontSize: 24,
+    fontWeight: FontWeight.w100,
+  );
+  static final largeNormal = GoogleFonts.montserrat(
     fontSize: 24,
     fontWeight: FontWeight.w400,
   );
-  static final largeBlackBold = GoogleFonts.montserrat(
+  static final largeBold = GoogleFonts.montserrat(
     fontSize: 24,
     fontWeight: FontWeight.w600,
   );
 
   /// Extra Large Text
-  static final extraLargeBlackNormal = GoogleFonts.montserrat(
+  static final extraLargeNormal = GoogleFonts.montserrat(
     letterSpacing: -0.5,
     fontSize: 34,
     fontWeight: FontWeight.w400,
   );
-  static final extraLargeBlackBold = GoogleFonts.montserrat(
+  static final extraLargeBold = GoogleFonts.montserrat(
     letterSpacing: -0.5,
     fontSize: 34,
     fontWeight: FontWeight.w600,
@@ -66,5 +74,9 @@ class KjText {
     letterSpacing: -0.5,
     fontSize: 20,
     fontWeight: FontWeight.w500,
+  );
+
+  static final justLight = GoogleFonts.montserrat(
+    fontWeight: FontWeight.w300,
   );
 }

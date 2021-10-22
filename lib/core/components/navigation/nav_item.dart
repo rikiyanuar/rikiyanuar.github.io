@@ -20,7 +20,10 @@ class NavItem extends StatelessWidget {
         padding: padding ?? EdgeInsets.symmetric(horizontal: 14, vertical: 24),
         child: Text(
           title,
-          style: TextStyle(fontWeight: FontWeight.w300),
+          style: TextStyle(
+            fontWeight: FontWeight.w300,
+            color: Colors.white.withOpacity(.8),
+          ),
         ),
       ),
     );

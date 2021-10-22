@@ -14,22 +14,15 @@ class LayoutScreen extends StatelessWidget {
         child: Container(
           width: size.width,
           constraints: BoxConstraints(minHeight: size.height),
-          child: Column(children: [
-            NavBar(),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(children: [
-                  Jumbotron(),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 120),
-                    child: Row(children: [
-                      Column(children: []),
-                    ]),
-                  ),
-                ]),
-              ),
+          child: Stack(children: [
+            SingleChildScrollView(
+              child: Column(children: [
+                Jumbotron(),
+                Tags(),
+              ], crossAxisAlignment: CrossAxisAlignment.start),
             ),
-          ], crossAxisAlignment: CrossAxisAlignment.start),
+            NavBar()
+          ]),
         ),
       ),
     );

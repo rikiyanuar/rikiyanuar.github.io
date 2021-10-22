@@ -16,9 +16,7 @@ class NavBar extends StatelessWidget {
         horizontal: isMobile(context) ? 24 : 40,
         vertical: isMobile(context) ? 12 : 0,
       ),
-      decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(color: Colors.white30)),
-      ),
+      color: Colors.black.withOpacity(.7),
       child: Row(children: [
         Logo(),
         Spacer(),
@@ -28,36 +26,40 @@ class NavBar extends StatelessWidget {
             NavItem(onTap: () {}, title: "Profile"),
             NavItem(onTap: () {}, title: "Portfolio"),
             NavItem(onTap: () {}, title: "Contact"),
-            IconButton(
-              icon: Icon(Icons.brightness_4_outlined),
-              onPressed: () => Scaffold.of(context).openEndDrawer(),
-              tooltip: "Switch to Light Theme",
-            ),
-            IconButton(
-              icon: Icon(Icons.language),
-              onPressed: () => Scaffold.of(context).openEndDrawer(),
-              tooltip: "Switch Language",
-            ),
+            themeButton(mainNotifier),
+            langButton(context),
           ]),
-        if (isMobile(context))
-          IconButton(
-            icon: Icon(Icons.brightness_4_outlined),
-            onPressed: () => mainNotifier.toggleMode(),
-            tooltip: "Switch to Light Theme",
-          ),
-        if (isMobile(context))
-          IconButton(
-            icon: Icon(Icons.language),
-            onPressed: () => Scaffold.of(context).openEndDrawer(),
-            tooltip: "Switch Language",
-          ),
+        if (isMobile(context)) themeButton(mainNotifier),
+        if (isMobile(context)) langButton(context),
         if (isMobile(context))
           IconButton(
             icon: Icon(Icons.menu),
+            color: Colors.white.withOpacity(.8),
             onPressed: () => Scaffold.of(context).openEndDrawer(),
             tooltip: "Open Menu",
           )
       ]),
+    );
+  }
+
+  IconButton langButton(BuildContext context) {
+    return IconButton(
+      icon: Icon(Icons.language),
+      color: Colors.white.withOpacity(.8),
+      onPressed: () => Scaffold.of(context).openEndDrawer(),
+      tooltip: "Switch Language",
+    );
+  }
+
+  IconButton themeButton(MainNotifier mainNotifier) {
+    final mode = mainNotifier.isDark ? "Light" : "Dark";
+    return IconButton(
+      icon: Icon(mainNotifier.isDark
+          ? Icons.brightness_4_outlined
+          : Icons.brightness_4),
+      color: Colors.white.withOpacity(.8),
+      onPressed: () => mainNotifier.toggleMode(),
+      tooltip: "Switch to $mode Theme",
     );
   }
 }

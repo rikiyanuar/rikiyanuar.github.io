@@ -11,7 +11,7 @@ class SideNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: size.width * .85,
-      color: Colors.black,
+      color: Colors.grey.shade900,
       height: double.infinity,
       child: SafeArea(
         child: Column(children: [
@@ -29,6 +29,7 @@ class SideNav extends StatelessWidget {
               Expanded(child: Center(child: Logo())),
               IconButton(
                 icon: Icon(Icons.close),
+                color: Colors.white.withOpacity(.8),
                 onPressed: () => Navigator.pop(context),
               ),
             ]),

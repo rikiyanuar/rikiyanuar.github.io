@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portofolio/core/utils/kj_di.dart';
+
+class Tags extends StatelessWidget {
+  const Tags({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white10,
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(vertical: 60, horizontal: 40),
+      child: Wrap(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(children: [
+              FaIcon(
+                FontAwesomeIcons.userTie,
+                size: 96,
+                color: Colors.black.withOpacity(.7),
+              ),
+              SizedBox(height: 30),
+              Text("Professional",
+                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              SizedBox(height: 10),
+              Text(
+                "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
+                style: KjText.justLight,
+                textAlign: TextAlign.center,
+              ),
+            ]),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(children: [
+              FaIcon(
+                FontAwesomeIcons.lightbulb,
+                size: 96,
+                color: Colors.black.withOpacity(.7),
+              ),
+              SizedBox(height: 30),
+              Text("Creative",
+                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              SizedBox(height: 10),
+              Text(
+                "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
+                style: KjText.justLight,
+                textAlign: TextAlign.center,
+              ),
+            ]),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(children: [
+              FaIcon(
+                FontAwesomeIcons.syncAlt,
+                size: 96,
+                color: Colors.black.withOpacity(.7),
+              ),
+              SizedBox(height: 30),
+              Text("Up-To-Date",
+                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              SizedBox(height: 10),
+              Text(
+                "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
+                style: KjText.justLight,
+                textAlign: TextAlign.center,
+              ),
+            ]),
+          ),
+        ],
+        runAlignment: WrapAlignment.center,
+        alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 20,
+        runSpacing: 30,
+      ),
+    );
+  }
+}
