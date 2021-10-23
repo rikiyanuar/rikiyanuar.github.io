@@ -12,12 +12,16 @@ class Footer extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: isMobile(context) ? 24 : 40,
-        vertical: isMobile(context) ? 12 : 0,
+        vertical: isMobile(context) ? 24 : 30,
       ),
-      child: Wrap(children: [
-        Text("© $year Riki Yanuar", style: KjText.mediumNormal),
-        Text("© $year Riki Yanuar", style: KjText.mediumNormal),
-      ], alignment: WrapAlignment.spaceBetween),
+      child: Wrap(
+        children: [
+          Text("© $year Riki Yanuar", style: KjText.mediumNormal),
+          Text("© $year Riki Yanuar", style: KjText.mediumNormal),
+        ],
+        alignment: WrapAlignment.spaceBetween,
+        crossAxisAlignment: WrapCrossAlignment.center,
+      ),
     );
   }
 }
