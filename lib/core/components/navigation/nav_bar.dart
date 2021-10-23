@@ -30,7 +30,7 @@ class NavBar extends StatelessWidget {
             langButton(context),
           ]),
         if (isMobile(context)) themeButton(mainNotifier),
-        if (isMobile(context)) langButton(context),
+        // if (isMobile(context)) langButton(context),
         if (isMobile(context))
           IconButton(
             icon: Icon(Icons.menu),

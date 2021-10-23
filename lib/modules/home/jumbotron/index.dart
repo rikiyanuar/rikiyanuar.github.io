@@ -18,14 +18,19 @@ class Jumbotron extends StatelessWidget {
           ),
         ),
       ),
+      alignment: Alignment.center,
       width: double.infinity,
-      padding: EdgeInsets.fromLTRB(40, 250, 40, 200),
+      padding: EdgeInsets.fromLTRB(
+        40,
+        isMobile(context) ? 180 : 250,
+        40,
+        isMobile(context) ? 130 : 200,
+      ),
       child: Column(children: [
         Text(
           "Hi, I'm Riki Yanuar",
-          style: KjText.extraLargeBold.copyWith(
-            color: Colors.white,
-          ),
+          style: KjText.extraLargeBold.copyWith(color: Colors.white),
+          textAlign: TextAlign.center,
         ),
         SizedBox(height: 10),
         Text(
@@ -37,7 +42,7 @@ class Jumbotron extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 40),
-        Row(children: [
+        Wrap(children: [
           InkWell(
             borderRadius: BorderRadius.circular(50),
             onTap: () {},
@@ -46,6 +51,7 @@ class Jumbotron extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
                 border: Border.all(color: Colors.yellow),
               ),
+              alignment: !isMobile(context) ? null : Alignment.center,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
               child: Text("Contact Me", style: KjText.mediumYellowNormal),
             ),
@@ -59,6 +65,7 @@ class Jumbotron extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
                 color: Colors.yellow,
               ),
+              alignment: !isMobile(context) ? null : Alignment.center,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
               child: Text(
                 "See My Resume",
@@ -68,7 +75,7 @@ class Jumbotron extends StatelessWidget {
               ),
             ),
           )
-        ], mainAxisAlignment: MainAxisAlignment.center),
+        ], runSpacing: 6),
       ]),
     );
   }

@@ -20,7 +20,7 @@ class KjText {
   /// Medium Text
   static final mediumLight = GoogleFonts.montserrat(
     fontSize: 16,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w200,
   );
   static final mediumNormal = GoogleFonts.montserrat(
     fontSize: 16,

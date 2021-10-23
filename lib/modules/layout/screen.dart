@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/core/components/index.dart';
+import 'package:portofolio/modules/home/index.dart';
 
 class LayoutScreen extends StatelessWidget {
   const LayoutScreen({Key? key}) : super(key: key);
@@ -16,10 +17,10 @@ class LayoutScreen extends StatelessWidget {
           constraints: BoxConstraints(minHeight: size.height),
           child: Stack(children: [
             SingleChildScrollView(
-              child: Column(children: [
-                Jumbotron(),
-                Tags(),
-              ], crossAxisAlignment: CrossAxisAlignment.start),
+              child: Column(
+                children: homeScreen,
+                crossAxisAlignment: CrossAxisAlignment.start,
+              ),
             ),
             NavBar()
           ]),
