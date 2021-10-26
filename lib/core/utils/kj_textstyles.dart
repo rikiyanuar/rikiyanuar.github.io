@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// Naming rules
 /// `Size` `Color` `Weight`.
@@ -7,56 +6,70 @@ import 'package:google_fonts/google_fonts.dart';
 ///
 /// Set default font family with `Montserrat`
 class KjText {
+  static const fontMontserrat = "Montserrat";
+  static const fontKaushan = "Kaushan";
+
   /// Small Text
-  static final smallNormal = GoogleFonts.montserrat(
+  static final smallNormal = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );
-  static final smallBold = GoogleFonts.montserrat(
+  static final smallBold = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 12,
     fontWeight: FontWeight.w600,
   );
 
   /// Medium Text
-  static final mediumLight = GoogleFonts.montserrat(
+  static final mediumLight = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 16,
     fontWeight: FontWeight.w200,
   );
-  static final mediumNormal = GoogleFonts.montserrat(
+  static final mediumNormal = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
-  static final mediumBold = GoogleFonts.montserrat(
+  static final mediumBold = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
-  static final mediumYellowNormal = GoogleFonts.montserrat(
+  static final mediumYellowNormal = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 16,
     color: Colors.yellow,
     fontWeight: FontWeight.w400,
   );
 
   /// Large Text
-  static final largeLight = GoogleFonts.montserrat(
+  static final largeLight = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 24,
     fontWeight: FontWeight.w100,
   );
-  static final largeNormal = GoogleFonts.montserrat(
+  static final largeNormal = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 24,
     fontWeight: FontWeight.w400,
   );
-  static final largeBold = GoogleFonts.montserrat(
+  static final largeBold = TextStyle(
+    fontFamily: fontMontserrat,
     fontSize: 24,
     fontWeight: FontWeight.w600,
   );
 
   /// Extra Large Text
-  static final extraLargeNormal = GoogleFonts.montserrat(
+  static final extraLargeNormal = TextStyle(
+    fontFamily: fontMontserrat,
     letterSpacing: -0.5,
     fontSize: 34,
     fontWeight: FontWeight.w400,
   );
-  static final extraLargeBold = GoogleFonts.montserrat(
+  static final extraLargeBold = TextStyle(
+    fontFamily: fontMontserrat,
     letterSpacing: -0.5,
     fontSize: 34,
     fontWeight: FontWeight.w600,
@@ -64,19 +77,15 @@ class KjText {
 
   /// Depends on UI
 
-  static final logo = GoogleFonts.kaushanScript(
+  static final logo = TextStyle(
+    fontFamily: fontKaushan,
     letterSpacing: -0.5,
     fontSize: 20,
     fontWeight: FontWeight.w500,
   );
 
-  static final menuItem = GoogleFonts.lobsterTwo(
-    letterSpacing: -0.5,
-    fontSize: 20,
-    fontWeight: FontWeight.w500,
-  );
-
-  static final justLight = GoogleFonts.montserrat(
+  static final justLight = TextStyle(
+    fontFamily: fontMontserrat,
     fontWeight: FontWeight.w300,
   );
 }
