@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/core/utils/kj_di.dart';
 
-class Projects extends StatelessWidget {
-  const Projects({Key? key}) : super(key: key);
+class Portfolio extends StatelessWidget {
+  const Portfolio({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey.withOpacity(.3),
       width: double.infinity,
-      padding: EdgeInsets.symmetric(vertical: 60, horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 80, horizontal: 40),
       child: Column(children: [
         Text(
           "Recent Apps",
-          style: KjText.largeBold.copyWith(color: Colors.yellow),
+          style: KjText.largeBold.copyWith(color: KjColors.yellow1),
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 20),

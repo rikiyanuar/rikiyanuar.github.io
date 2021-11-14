@@ -43,7 +43,7 @@ class Jumbotron extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  border: Border.all(color: Colors.yellow),
+                  border: Border.all(color: KjColors.yellow1),
                 ),
                 alignment: !isMobile(context) ? null : Alignment.center,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -57,7 +57,7 @@ class Jumbotron extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: Colors.yellow,
+                  color: KjColors.yellow1,
                 ),
                 alignment: !isMobile(context) ? null : Alignment.center,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),

@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/core/notifier/main_notifier.dart';
 import 'package:portofolio/core/utils/kj_di.dart';
-import 'package:provider/provider.dart';
 
 import '../index.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({Key? key}) : super(key: key);
+  final GlobalKey keyHome, keyProfile, keyPortfolio, keyContact;
+  const NavBar({
+    Key? key,
+    required this.keyHome,
+    required this.keyProfile,
+    required this.keyPortfolio,
+    required this.keyContact,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final mainNotifier = Provider.of<MainNotifier>(context);
+    // final mainNotifier = Provider.of<MainNotifier>(context);
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: isMobile(context) ? 24 : 40,
@@ -22,14 +28,26 @@ class NavBar extends StatelessWidget {
         Spacer(),
         if (!isMobile(context))
           Row(children: [
-            NavItem(onTap: () {}, title: "Home"),
-            NavItem(onTap: () {}, title: "Profile"),
-            NavItem(onTap: () {}, title: "Portfolio"),
-            NavItem(onTap: () {}, title: "Contact"),
-            themeButton(mainNotifier),
-            langButton(context),
+            NavItem(
+              onTap: () => onTapMenu(keyHome),
+              title: "Home",
+            ),
+            NavItem(
+              onTap: () => onTapMenu(keyProfile),
+              title: "Profile",
+            ),
+            NavItem(
+              onTap: () => onTapMenu(keyPortfolio),
+              title: "Portfolio",
+            ),
+            NavItem(
+              onTap: () => onTapMenu(keyContact),
+              title: "Contact",
+            ),
+            // themeButton(mainNotifier),
+            // langButton(context),
           ]),
-        if (isMobile(context)) themeButton(mainNotifier),
+        // if (isMobile(context)) themeButton(mainNotifier),
         // if (isMobile(context)) langButton(context),
         if (isMobile(context))
           IconButton(
@@ -61,5 +79,9 @@ class NavBar extends StatelessWidget {
       onPressed: () => mainNotifier.toggleMode(),
       tooltip: "Switch to $mode Theme",
     );
+  }
+
+  onTapMenu(GlobalKey key) {
+    Scrollable.ensureVisible(key.currentContext!);
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MainNotifier with ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.dark;
+  ThemeMode themeMode = ThemeMode.light;
 
   MainNotifier();
 

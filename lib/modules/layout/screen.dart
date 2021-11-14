@@ -8,6 +8,10 @@ class LayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final homeKey = GlobalKey();
+    final profileKey = GlobalKey();
+    final projectKey = GlobalKey();
+    final contactKey = GlobalKey();
 
     return Scaffold(
       endDrawer: SideNav(size: size),
@@ -17,15 +21,28 @@ class LayoutScreen extends StatelessWidget {
           constraints: BoxConstraints(minHeight: size.height),
           child: Stack(children: [
             SingleChildScrollView(
-              child: Column(
-                children: homeScreen,
-                crossAxisAlignment: CrossAxisAlignment.start,
-              ),
+              child: Column(children: [
+                Jumbotron(key: homeKey),
+                Tags(),
+                Profile(key: profileKey),
+                Portfolio(key: projectKey),
+                Contact(key: contactKey),
+                Footer(),
+              ], crossAxisAlignment: CrossAxisAlignment.start),
             ),
-            NavBar()
+            NavBar(
+              keyHome: homeKey,
+              keyProfile: profileKey,
+              keyPortfolio: projectKey,
+              keyContact: contactKey,
+            )
           ]),
         ),
       ),
     );
+  }
+
+  onTapMenu(GlobalKey key) {
+    Scrollable.ensureVisible(key.currentContext!);
   }
 }

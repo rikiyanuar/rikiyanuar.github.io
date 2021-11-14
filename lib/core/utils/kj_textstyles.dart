@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'kj_di.dart';
+
 /// Naming rules
 /// `Size` `Color` `Weight`.
 /// example: `smallWhiteBold`
@@ -40,7 +42,7 @@ class KjText {
   static final mediumYellowNormal = TextStyle(
     fontFamily: fontMontserrat,
     fontSize: 16,
-    color: Colors.yellow,
+    color: KjColors.yellow1,
     fontWeight: FontWeight.w400,
   );
 
@@ -87,5 +89,10 @@ class KjText {
   static final justLight = TextStyle(
     fontFamily: fontMontserrat,
     fontWeight: FontWeight.w300,
+  );
+
+  static final justNormal = TextStyle(
+    fontFamily: fontMontserrat,
+    fontWeight: FontWeight.w400,
   );
 }

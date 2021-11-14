@@ -7,14 +7,18 @@ class Tags extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white10,
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(vertical: 60, horizontal: 40),
       child: Wrap(
         children: [
-          Padding(
-            padding: EdgeInsets.all(20),
+          Container(
+            color: KjColors.yellow1,
+            width: isDesktop(context) ? size.width / 3 : size.width,
+            padding: EdgeInsets.symmetric(
+              vertical: 60,
+              horizontal: isDesktop(context) ? 0 : 20,
+            ),
             child: Column(children: [
               FaIcon(
                 FontAwesomeIcons.userTie,
@@ -22,18 +26,22 @@ class Tags extends StatelessWidget {
                 color: Colors.black.withOpacity(.7),
               ),
               SizedBox(height: 30),
-              Text("Professional",
-                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              Text("Professional", style: KjText.largeBold),
               SizedBox(height: 10),
               Text(
                 "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
-                style: KjText.justLight,
+                style: KjText.justNormal,
                 textAlign: TextAlign.center,
               ),
             ]),
           ),
-          Padding(
-            padding: EdgeInsets.all(20),
+          Container(
+            color: KjColors.yellow1.withOpacity(.9),
+            width: isDesktop(context) ? size.width / 3 : size.width,
+            padding: EdgeInsets.symmetric(
+              vertical: 60,
+              horizontal: isDesktop(context) ? 0 : 20,
+            ),
             child: Column(children: [
               FaIcon(
                 FontAwesomeIcons.lightbulb,
@@ -41,18 +49,22 @@ class Tags extends StatelessWidget {
                 color: Colors.black.withOpacity(.7),
               ),
               SizedBox(height: 30),
-              Text("Creative",
-                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              Text("Creative", style: KjText.largeBold),
               SizedBox(height: 10),
               Text(
                 "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
-                style: KjText.justLight,
+                style: KjText.justNormal,
                 textAlign: TextAlign.center,
               ),
             ]),
           ),
-          Padding(
-            padding: EdgeInsets.all(20),
+          Container(
+            color: KjColors.yellow1.withOpacity(.8),
+            width: isDesktop(context) ? size.width / 3 : size.width,
+            padding: EdgeInsets.symmetric(
+              vertical: 60,
+              horizontal: isDesktop(context) ? 0 : 20,
+            ),
             child: Column(children: [
               FaIcon(
                 FontAwesomeIcons.syncAlt,
@@ -60,22 +72,21 @@ class Tags extends StatelessWidget {
                 color: Colors.black.withOpacity(.7),
               ),
               SizedBox(height: 30),
-              Text("Up-To-Date",
-                  style: KjText.largeBold.copyWith(color: Colors.yellow)),
+              Text("Up-To-Date", style: KjText.largeBold),
               SizedBox(height: 10),
               Text(
                 "Innovation is the heart and soul of Lithios.\nTechnology is fast moving and ever-changing.\nWe strive to search for the best solution.",
-                style: KjText.justLight,
+                style: KjText.justNormal,
                 textAlign: TextAlign.center,
               ),
             ]),
           ),
         ],
-        runAlignment: WrapAlignment.center,
-        alignment: WrapAlignment.center,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: 20,
-        runSpacing: 30,
+        // runAlignment: WrapAlignment.center,
+        // alignment: WrapAlignment.center,
+        // crossAxisAlignment: WrapCrossAlignment.center,
+        // spacing: 20,
+        // runSpacing: 30,
       ),
     );
   }
